@@ -1,0 +1,9 @@
+.slider{
+    display: inline-flex;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.horizontal-scrollable > .slider {
+    overflow-x: auto;
+    white-space: nowrap;
+}
