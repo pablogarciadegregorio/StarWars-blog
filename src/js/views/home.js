@@ -20,6 +20,8 @@ export const Home = () =>  {
 		<div className="slider ">
 				{store.people.map((item) => (
 				<Card 
+				uid={item.uid}
+				name={item.name}
 				key={item.uid}/>))}
 				
 			

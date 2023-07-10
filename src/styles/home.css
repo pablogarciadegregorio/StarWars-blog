@@ -1,9 +1,11 @@
 .slider{
     display: inline-flex;
     white-space: nowrap;
-    overflow-x: auto;
+    
 }
 
 .characters{
-    width: 60vw;
+    width: 70vw;
+    overflow-x: auto;
 }
+
