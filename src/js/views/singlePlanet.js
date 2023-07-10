@@ -4,21 +4,21 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 
-export const Single = props => {
+export const SinglePlanet = props => {
 	const { store, actions } = useContext(Context);
 	const params = useParams();
 	useEffect(() => {
-		actions.getSinglePeople(params.theid) //genera un objeto con la propiedad theid. Fetch de ese personaje en concreto
+		actions.getSinglePlanet(params.theid) //genera un objeto con la propiedad theid. Fetch de ese personaje en concreto
 	}, [])
 
 
-	console.log(store.singlePeople);
+	console.log(store.singlePlanets);
 	return (
 		<div className="singlePeople m-auto">
 			<div className="row">
 				<img className="col-6" src="https://www.gammaracionero.es/wp-content/uploads/2016/09/placeholder-800x600.png"></img>
 				<div className="col-6 text-center">
-					<h1 className="peopleName font-weight-bold">{store.singlePeople.properties?.name}</h1>
+					<h1 className="peopleName font-weight-bold">{store.singlePlanets.properties?.name}</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla accumsan sem metus, quis fermentum eros pellentesque id. Nullam facilisis et sem nec finibus. Duis purus lectus, laoreet eget felis id, ornare viverra lectus. Praesent sed ligula aliquet, auctor elit et, iaculis mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum aliquet ipsum et iaculis. Praesent aliquet justo vitae lectus venenatis placerat vel non arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus a neque eget tellus luctus lacinia non sit amet erat.</p>
 				</div>
 			</div>
@@ -26,27 +26,27 @@ export const Single = props => {
 			<div className="properties text-danger row">
 				<div className="col-2 text-center">
 					<p>Name</p>
-					<p>{store.singlePeople.properties?.name}</p>
+					<p>{store.singlePlanets.properties?.name}</p>
 				</div>
 				<div className="col-2 text-center">
-					<p>Birth Year</p>
-					<p>{store.singlePeople.properties?.birth_year}</p>
+					<p>Population</p>
+					<p>{store.singlePlanets.properties?.population}</p>
 				</div>
 				<div className="col-2 text-center">
-					<p>Gender</p>
-					<p>{store.singlePeople.properties?.gender}</p>
+					<p>Diameter</p>
+					<p>{store.singlePlanets.properties?.diameter}</p>
 				</div>
 				<div className="col-2 text-center">
-					<p>Height</p>
-					<p>{store.singlePeople.properties?.height}</p>
+					<p>Gravity</p>
+					<p>{store.singlePlanets.properties?.gravity}</p>
 				</div>
 				<div className="col-2 text-center">
-					<p>Skin Color</p>
-					<p>{store.singlePeople.properties?.skin_color}</p>
+					<p>Climate</p>
+					<p>{store.singlePlanets.properties?.climate}</p>
 				</div>
 				<div className="col-2 text-center">
-					<p>Eye Color</p>
-					<p>{store.singlePeople.properties?.eye_color}</p>
+					<p>Terrain</p>
+					<p>{store.singlePlanets.properties?.terrain}</p>
 				</div>
 
 			</div>
@@ -61,6 +61,6 @@ export const Single = props => {
 	);
 };
 
-Single.propTypes = {
+SinglePlanet.propTypes = {
 	match: PropTypes.object
 };

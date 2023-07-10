@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 export const Navbar = () => {
+
+	const navigate = useNavigate();
+
 	return (
 		<div className="navBackground bg-light">
 			<nav className="navbar navbar-light bg-light mb-3 m-auto ">
-							<img className="SWlogo ms-0" src="https://seeklogo.com/images/S/Star_Wars-logo-BF51C9BC8D-seeklogo.com.png"></img>
+							<img className="SWlogo ms-0" onClick={e=>navigate("/")} src="https://seeklogo.com/images/S/Star_Wars-logo-BF51C9BC8D-seeklogo.com.png"></img>
 				
 				<div className="dropdown">
 					<a className="btn btn-primary dropdown-toggle me-0 " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">

@@ -4,6 +4,11 @@
     
 }
 
+.slider2{
+    display: inline-flex;
+    white-space: nowrap;
+    
+}
 .characters{
     width: 70vw;
     overflow-x: auto;

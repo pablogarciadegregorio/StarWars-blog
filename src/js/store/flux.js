@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			people: [],
+			planets:[],
+			singlePlanets:{},
 			singlePeople: {}
 		},
 		actions: {
@@ -31,6 +33,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			},
 
+
+
+			getPlanets: () => {
+				fetch("https://www.swapi.tech/api/planets")
+					.then(response => response.json())
+					.then(data => {
+						console.log(data);
+						setStore({ planets: data.results });
+					})
+					.catch(error => console.log(error));
+			},
+
+
+
+			getSinglePlanet: async (id) => {
+				try {
+					const resp = await fetch("https://www.swapi.tech/api/planets/" + id)
+					const data = await resp.json()
+					console.log(data);
+					setStore({ singlePlanets: data.result });
+				}
+				catch (error) {
+					console.log(error);
+				}
+
+
+
+			},
 
 
 
