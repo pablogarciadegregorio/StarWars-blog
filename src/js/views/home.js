@@ -9,14 +9,19 @@ export const Home = () =>  {
 	const [favorite,setFavorite] = useState([]);
 	const {store,actions} = useContext(Context);
 
-	actions.getPeople();
+	useEffect(() => {
+		actions.getPeople();
+	}, []);
 	console.log(store.people);
 
 	return (
-	<div className="characters">
-		<h1 className="text-danger">Characters</h1>
-		<div className="slider">
-				{store.characters.map(item) => (<Card key={item.uid}/>)}
+	<div className="characters m-auto">
+		<h1 className="text-danger mb-2">Characters</h1>
+		<div className="slider ">
+				{store.people.map((item) => (
+				<Card 
+				key={item.uid}/>))}
+				
 			
 			
 		</div>
