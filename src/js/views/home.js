@@ -3,6 +3,7 @@ import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 import { Card } from "../component/card";
 import { PlanetCard } from "../component/planetCard";
+import { StarshipCard} from "../component/starshipCard";
 import { Context } from "../store/appContext";
 
 export const Home = () =>  {
@@ -13,9 +14,11 @@ export const Home = () =>  {
 	useEffect(() => {
 		actions.getPeople();
 		actions.getPlanets();
+		actions.getStarships();
 	}, []);
 	console.log(store.people);
 	console.log(store.planets);
+	console.log(store.starships);
 
 	return (
 	<div className="characters m-auto ">
@@ -31,6 +34,14 @@ export const Home = () =>  {
 		<div className="slider2  d-flex flex-nowrap overflow-auto">
 				{store.planets.map((item) => (
 				<PlanetCard
+				uid={item.uid}
+				name={item.name}
+				key={item.uid}/>))}						
+		</div>
+		<h1 className="text-danger mb-4 mt-5"><i className="fa-solid fa-rocket headerIcon me-2"></i>Starships</h1>
+		<div className="slider2  d-flex flex-nowrap overflow-auto">
+				{store.starships.map((item) => (
+				<StarshipCard
 				uid={item.uid}
 				name={item.name}
 				key={item.uid}/>))}						
