@@ -1,11 +1,29 @@
-import React, { Component, useState, useEffect } from "react";
+import React, { useContext, Component, useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useNavigate } from "react-router";
+import { Context } from "../store/appContext";
 
 export const Card = props => {
 
   const navigate = useNavigate();
+  const [state, setState] = useState({});
+  const { store,actions } = useContext(Context);
   
+  
+  function handleFavorite(e) {
+		e.preventDefault();
+     
+		if(store.favorites.indexOf(props.name) !==-1 ){
+			
+			actions.deleteFromFavorites(props.name);
+
+
+		} else {
+			actions.addToFavorites(props.name);
+		}
+		}
+
+
   
 
    return (
@@ -19,7 +37,7 @@ export const Card = props => {
 
         <div className=" container d-flex p-0">
         <button href="#" className="btn btn-primary m-0 " url={props.url} onClick={e=>navigate("/single/"+props.uid)}>Learn More</button>
-        <button className="btn btn-warning like ms-auto "><i className="fa-regular fa-heart "></i></button>
+        <button className="btn btn-warning like ms-auto " onClick={e => handleFavorite(e)}><i className="fa-regular fa-heart "></i></button>
         </div>
     </div>
   </div>
