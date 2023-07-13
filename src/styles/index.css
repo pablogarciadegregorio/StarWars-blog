@@ -11,30 +11,22 @@
 
 
 
-.like{
-    /* margin-left:91px; */
-    background-color: white;
+ .like{
+         background-color: white;
     
 }
-.like:hover {
-    background-color: #E4A11B;
-  }
 
   .fa-heart{
     color:#E4A11B;
-    
-}
-  .like:hover .fa-heart { 
-    color: rgb(158, 4, 4);
+    background-color: TRANSPARENT;
   }
+  
 
-
-.noFaved{
-    background-color: transparent;
+.fa-trash{
+    cursor:pointer
 }
-
-.faved{
-    background-color: rgb(252, 0, 0);
+.fa-trash:hover{
+    color:grey;
 }
 
 
