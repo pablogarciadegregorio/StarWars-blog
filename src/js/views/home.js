@@ -19,15 +19,15 @@ export const Home = () =>  {
 
 	return (
 	<div className="characters m-auto ">
-		<h1 className="text-danger mb-2">Characters</h1>
-		<div className="slider mb-2 d-flex flex-nowrap overflow-auto">
+		 <h1 className="text-danger mb-4"><i className="fa-brands fa-jedi-order headerIcon me-2"></i>Characters</h1>
+		<div className="slider mb-4 d-flex flex-nowrap overflow-auto">
 				{store.people.map((item) => (
 				<Card 
 				uid={item.uid}
 				name={item.name}
 				key={item.uid}/>))}					
 		</div>
-		<h1 className="text-danger mb-2 mt-2">Planets</h1>
+		<h1 className="text-danger mb-4 mt-5"><i className="fa-solid fa-earth-asia headerIcon me-2"></i>Planets</h1>
 		<div className="slider2  d-flex flex-nowrap overflow-auto">
 				{store.planets.map((item) => (
 				<PlanetCard

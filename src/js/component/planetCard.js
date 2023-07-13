@@ -16,10 +16,10 @@ export const PlanetCard = props => {
       <p className="card-text">Population: 100.000.000</p>
       <p className="card-text">Terrain : Grasslands, mountains</p>
       
-      
+      <div className=" container d-flex p-0">
         <button href="#" className="btn btn-primary m-0 " url={props.url} onClick={e=>navigate("/singlePlanets/"+props.uid)}>Learn More</button>
-        <button className="btn btn-warning like "><i className="fa-regular fa-heart  text-warning"></i></button>
-      
+        <button className="btn btn-warning like ms-auto"><i className="fa-regular fa-heart  text-warning"></i></button>
+      </div>
     </div>
   </div>
 );
