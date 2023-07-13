@@ -17,9 +17,9 @@ export const Card = props => {
       <p className="card-text">Hair color: grey</p>
       <p className="card-text">Eye color: blue</p>
 
-        <div className="d-flex justify-content-around">
+        <div className=" container d-flex p-0">
         <button href="#" className="btn btn-primary m-0 " url={props.url} onClick={e=>navigate("/single/"+props.uid)}>Learn More</button>
-        <button className="btn btn-warning like "><i className="fa-regular fa-heart "></i></button>
+        <button className="btn btn-warning like ms-auto "><i className="fa-regular fa-heart "></i></button>
         </div>
     </div>
   </div>
