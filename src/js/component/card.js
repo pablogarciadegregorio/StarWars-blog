@@ -8,7 +8,10 @@ export const Card = props => {
   const navigate = useNavigate();
   const [state, setState] = useState({});
   const { store,actions } = useContext(Context);
+
   
+  const  [likeButton, setLikeButton] = useState([]);
+ 
   
   function handleFavorite(e) {
 		e.preventDefault();
@@ -23,7 +26,6 @@ export const Card = props => {
 		}
 		}
 
-
   
 
    return (
@@ -37,7 +39,7 @@ export const Card = props => {
 
         <div className=" container d-flex p-0">
         <button href="#" className="btn btn-primary m-0 " url={props.url} onClick={e=>navigate("/single/"+props.uid)}>Learn More</button>
-        <button className="btn btn-warning like ms-auto " onClick={e => handleFavorite(e)}><i className="fa-regular fa-heart "></i></button>
+        <button className="btn btn-warning like ms-auto " onClick={e => handleFavorite(e)}><i className="like fa-regular fa-heart"></i></button>
         </div>
     </div>
   </div>
