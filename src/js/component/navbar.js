@@ -11,7 +11,7 @@ export const Navbar = () => {
 			<nav className="navbar navbar-light bg-light mb-3 m-auto ">
 							<img className="SWlogo ms-0" onClick={e=>navigate("/")} src="https://seeklogo.com/images/S/Star_Wars-logo-BF51C9BC8D-seeklogo.com.png"></img>
 				
-				<div className="dropdown">
+				<div className="dropdown ">
 					<a className="btn btn-primary dropdown-toggle me-0 " href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
 						Favorites
 						<span className="badge rounded-pill bg-danger ms-1">3</span>  
@@ -19,7 +19,7 @@ export const Navbar = () => {
 					</a>
 					
 
-					<ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
+					<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuLink">
 						<li><a className="dropdown-item" href="#">Acción</a></li>
 						<li><a className="dropdown-item" href="#">Otra acción</a></li>
 						<li><a className="dropdown-item" href="#">Algo más aqui</a></li>

@@ -18,9 +18,9 @@ export const Home = () =>  {
 	console.log(store.planets);
 
 	return (
-	<div className="characters m-auto">
+	<div className="characters m-auto ">
 		<h1 className="text-danger mb-2">Characters</h1>
-		<div className="slider mb-2 ">
+		<div className="slider mb-2 d-flex flex-nowrap overflow-auto">
 				{store.people.map((item) => (
 				<Card 
 				uid={item.uid}
@@ -28,15 +28,12 @@ export const Home = () =>  {
 				key={item.uid}/>))}					
 		</div>
 		<h1 className="text-danger mb-2 mt-2">Planets</h1>
-		<div className="slider2 ">
+		<div className="slider2  d-flex flex-nowrap overflow-auto">
 				{store.planets.map((item) => (
 				<PlanetCard
 				uid={item.uid}
 				name={item.name}
-				key={item.uid}/>))}
-				
-			
-			
+				key={item.uid}/>))}						
 		</div>
 	</div>
 	);

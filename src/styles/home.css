@@ -2,15 +2,22 @@
     display: inline-flex;
     white-space: nowrap;
     
+    
 }
 
 .slider2{
     display: inline-flex;
     white-space: nowrap;
+   
     
 }
 .characters{
     width: 70vw;
-    overflow-x: auto;
+    white-space: nowrap;
 }
 
+.card{
+    flex-basis: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
