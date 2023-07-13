@@ -9,9 +9,9 @@ export const Navbar = props => {
 	const navigate = useNavigate();
 	const {store,actions} = useContext(Context);
 
-	function handleDelete(e) {
-		e.preventDefault();
-		actions.deleteFromFavorites(props.name);
+	function handleDelete(item) {
+		
+		actions.deleteFromFavorites(item);
 		console.log("");
 	}
 
@@ -30,7 +30,7 @@ export const Navbar = props => {
 
 					<ul className="dropdown-menu dropdown-menu-end " aria-labelledby="dropdownMenuLink">
 					{store.favorites.map((item, index) => (
-						<li key={index} className="d-flex align-items-center"><a className="dropdown-item " href="#">{item}</a> <i className="fa-solid fa-trash pe-2" onClick={e => handleDelete(e)}></i></li>
+						<li key={index} className="d-flex align-items-center"><a className="dropdown-item " href="#">{item}</a> <i className="fa-solid fa-trash pe-2" onClick={e => handleDelete(item)}></i></li>
 					))}
 					</ul>
 				</div>

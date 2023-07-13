@@ -29,6 +29,17 @@
   }
 
 
+.noFaved{
+    background-color: transparent;
+}
+
+.faved{
+    background-color: rgb(252, 0, 0);
+}
+
+
+
+
 .navbar{
     width:70vw;
 }
